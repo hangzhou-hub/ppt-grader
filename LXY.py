@@ -143,6 +143,16 @@ with st.sidebar:
     """)
     st.warning("提示：本程序为单文件演示版，部分视觉特效（如纹理、具体动画参数）采用模拟评分逻辑。")
 
+    # === 新增：作者信息 ===
+    st.markdown("---")  # 画一条分割线
+    st.markdown("""
+    ### 👨‍🎓 关于作者
+    - **姓名**：李雅菲
+    - **学号**：20202502320150
+    - **专业**：金融学02班
+    - **版本**：v1.0 (2025 Demo)
+    """)
+
 # 主界面：文件上传
 col1, col2 = st.columns(2)
 with col1:
@@ -203,4 +213,5 @@ if student_file is not None:
                     mime='text/csv',
                 )
 else:
+
     st.info("👋 请先在左侧上传学生作业 PPT 文件以开始。")
